@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# 📝 Task Tracker (MERN Stack)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **full-stack Task Tracker application** built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js).
+This app allows users to **add, view, and mark tasks as completed** with a clean UI and RESTful API integration.
 
-## Available Scripts
+✅ **Live Demo:** [https://task-tracker-pi-pink.vercel.app](https://task-tracker-pi-pink.vercel.app)
+📂 **GitHub Repository:** [https://github.com/AHSAINI0405/Task-Tracker](https://github.com/AHSAINI0405/Task-Tracker.git)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* ✅ Add new tasks
+* 📋 View all tasks
+* ✔ Mark tasks as **Completed**
+* 🔄 Real-time UI updates
+* 🌐 REST API-based architecture
+* 🎨 Tailwind CSS for modern UI
+* 🔔 Toast notifications using React Toastify
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
 
-### `npm run build`
+* React.js
+* Axios (API calls)
+* React Toastify (notifications)
+* Tailwind CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Node.js
+* Express.js
+* MongoDB (Atlas or Local)
+* Mongoose
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## ⚙️ Environment Variables
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Backend (`backend/.env`)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Example (MongoDB Atlas):
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```env
+MONGO_URI=mongodb+srv://username:password@cluster0.mongodb.net/tasktracker
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Frontend (`frontend/.env`)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```env
+REACT_APP_API_URL=http://localhost:5000/api
+```
 
-### Code Splitting
+⚠️ Restart frontend after adding `.env`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📦 Installation & Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 1️⃣ Clone the Repository
 
-### Making a Progressive Web App
+```bash
+git clone https://github.com/AHSAINI0405/Task-Tracker.git
+cd Task-Tracker
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+### 2️⃣ Backend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+cd backend
+npm install
+npm start
+```
 
-### Deployment
+Backend will run on:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+http://localhost:5000
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 3️⃣ Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+Frontend will run on:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🔗 API Endpoints
+
+| Method | Endpoint         | Description            |
+| ------ | ---------------- | ---------------------- |
+| POST   | `/api/tasks`     | Add new task           |
+| GET    | `/api/tasks`     | Get all tasks          |
+| PUT    | `/api/tasks/:id` | Mark task as completed |
+
+---
+
+## 🧪 Example Task Object
+
+```json
+{
+  "title": "Learn MERN Stack",
+  "status": "Pending"
+}
+```
+
+---
+
+## 👨‍💻 Author
+
+**Amit Saini**
+Aspiring Full Stack Developer (MERN)
+📍 India
+
+---
