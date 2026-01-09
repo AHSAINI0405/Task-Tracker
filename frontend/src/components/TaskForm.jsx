@@ -52,17 +52,24 @@ const TaskForm = ({ fetchTasks }) => {
       />
 
       <div className="flex gap-2">
-        <select
-          className="flex-1 border p-2 rounded"
-          value={form.priority}
-          onChange={(e) =>
-            setForm({ ...form, priority: e.target.value })
-          }
-        >
-          <option>Low</option>
-          <option>Medium</option>
-          <option>High</option>
-        </select>
+  {["Low", "Medium", "High"].map((level) => (
+    <button
+      key={level}
+      className={`flex-1 py-2 rounded transition-colors ${
+        form.priority === level
+          ? level === "Low"
+            ? "bg-green-500 text-white"
+            : level === "Medium"
+            ? "bg-yellow-400 text-white"
+            : "bg-red-500 text-white"
+          : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+      }`}
+      onClick={() => setForm({ ...form, priority: level })}
+    >
+      {level}
+    </button>
+  ))}
+
 
         <input
           type="date"
